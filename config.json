@@ -4,18 +4,18 @@
         "input_size":           416,
         "anchors":              [1.57,1.77, 2.80,8.62, 3.60,3.36, 5.51,10.50, 9.22,11.30],
         "max_box_per_image":    10,        
-        "labels":               ["helmet","person with helmet","person without helmet"]
+        "labels":               ["helmet","person","safety vest"]
     },
 
     "train": {
         "train_image_folder":   "train-images-data/",
         "train_annot_folder":   "train-images-annotations/",     
           
-        "train_times":          10,
+        "train_times":          3,
         "pretrained_weights":   "",
-        "batch_size":           2,
+        "batch_size":           16,
         "learning_rate":        1e-4,
-        "nb_epochs":            50,
+        "nb_epochs":            100,
         "warmup_epochs":        0,
 
         "object_scale":         5.0 ,
