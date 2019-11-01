@@ -18,6 +18,7 @@ for annotation in annotations:
     path = root.find('path').text
     old_path_file = path[path.rindex("\\") + 1: path.index(".jpg")]
     root.find('path').text = path.replace(old_path_file, str(index).zfill(5))
+    root.find('filename').text = str(index).zfill(5) + ".jpg"
     print(old_path_file, root.find('path').text)
     for object in root.findall('object'):
         if "person" in object.find('name').text:
