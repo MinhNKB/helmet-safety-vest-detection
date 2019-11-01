@@ -23,7 +23,7 @@
         "coord_scale":          1.0,
         "class_scale":          1.0,
 
-        "saved_weights_name":   "full_yolo_helmet_and_person.h5",
+        "saved_weights_name":   "full_yolo_helmet_vest_and_person.h5",
         "debug":                false
     },
 

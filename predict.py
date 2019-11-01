@@ -60,8 +60,8 @@ def _main_(args):
     ###############################
 
     color_map = {"helmet" : (255, 0, 0),
-                 "person with helmet" : (0, 255, 0),
-                 "person without helmet" : (0, 0, 255)}
+                 "person" : (0, 255, 0),
+                 "safety vest" : (0, 0, 255)}
 
     if image_path[-4:] == '.mp4':
         video_out = image_path[:-4] + '_detected' + image_path[-4:]

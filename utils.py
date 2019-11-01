@@ -59,25 +59,26 @@ def draw_boxes(image, boxes, labels, color_map = None):
     image_h, image_w, _ = image.shape
 
     for box in boxes:
-        xmin = int(box.xmin*image_w)
-        ymin = int(box.ymin*image_h)
-        xmax = int(box.xmax*image_w)
-        ymax = int(box.ymax*image_h)
+        if box.get_score() > 0.5:
+            xmin = int(box.xmin*image_w)
+            ymin = int(box.ymin*image_h)
+            xmax = int(box.xmax*image_w)
+            ymax = int(box.ymax*image_h)
 
-        label = labels[box.get_label()]
+            label = labels[box.get_label()]
 
-        if (color_map is not None) and (label in color_map.keys()):
-            color = color_map[label]
-        else:
-            color = (255, 255, 255)
+            if (color_map is not None) and (label in color_map.keys()):
+                color = color_map[label]
+            else:
+                color = (255, 255, 255)
 
-        cv2.rectangle(image, (xmin,ymin), (xmax,ymax), color, 3)
-        cv2.putText(image, 
-                    label + ' ' + str(box.get_score()),
-                    (xmin, ymin - 13), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 
-                    1e-3 * image_h, 
-                    color, 2)
+            cv2.rectangle(image, (xmin,ymin), (xmax,ymax), color, 3)
+            cv2.putText(image,
+                        label + ' ' + str(box.get_score()),
+                        (xmin, ymin - 13),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        1e-3 * image_h,
+                        color, 2)
         
     return image          
         
