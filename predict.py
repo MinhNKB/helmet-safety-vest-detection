@@ -81,6 +81,8 @@ def _main_(args):
             _, image = video_reader.read()
             
             boxes = yolo.predict(image)
+            print(boxes[0].xmin, boxes[0].ymin)
+            exit(0)
             image = draw_boxes(image, boxes, config['model']['labels'], color_map)
 
             video_writer.write(np.uint8(image))

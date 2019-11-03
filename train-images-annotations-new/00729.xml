@@ -1,0 +1,26 @@
+<annotation>
+	<folder>non_workers</folder>
+	<filename>00729.jpg</filename>
+	<path>D:\Workspace\YOLO_annotation\dataset_images\non_workers\00729.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>450</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person without safety</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>121</xmin>
+			<ymin>69</ymin>
+			<xmax>325</xmax>
+			<ymax>259</ymax>
+		</bndbox>
+	</object>
+</annotation>
