@@ -59,7 +59,7 @@ def draw_boxes(image, boxes, labels, color_map = None):
     image_h, image_w, _ = image.shape
 
     for box in boxes:
-        if box.get_score() > 0.5:
+        if box.get_score() > 0:
             xmin = int(box.xmin*image_w)
             ymin = int(box.ymin*image_h)
             xmax = int(box.xmax*image_w)
