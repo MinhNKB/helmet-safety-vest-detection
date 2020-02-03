@@ -1,0 +1,26 @@
+<annotation>
+	<folder>filter-images</folder>
+	<filename>00327.jpg</filename>
+	<path>D:\Projects\Internal\wear-helmet-detection\keras-yolo2\filter-images\00327.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>500</width>
+		<height>500</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>safety vest</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>95</xmin>
+			<ymin>33</ymin>
+			<xmax>386</xmax>
+			<ymax>453</ymax>
+		</bndbox>
+	</object>
+</annotation>
